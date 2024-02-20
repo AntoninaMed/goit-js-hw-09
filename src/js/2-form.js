@@ -7,8 +7,8 @@ feedbackFormEl.addEventListener('input', handleInput);
 
 function handleInput() {
   const storedObj = {
-    email: feedbackFormEl.elements.email.value.trim(),
-    textarea: feedbackFormEl.elements.message.value.trim(),
+    email: feedbackFormEl.elements.email.value.trim() || '',
+    textarea: feedbackFormEl.elements.message.value.trim() || '',
   };
   localStorage.setItem(localStorageKey, JSON.stringify(storedObj));
 }
